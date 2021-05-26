@@ -1,31 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <title>Utilizando o EJS</title>
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>El - music</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="/css/styles.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
 <body>
-  <header>
-     <nav class="navbar navbar-inverse">
-      <ul class="nav navbar-nav">
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-     </nav>
-  </header>  
-
-   <main>
-     <div class="container">
-      <%- body %>
-     </div>
-   </main>
-
-  <footer>
-    EJS
-  </footer>
+  <div id="app">
+    <aside>
+      <div class="aside-titulo">
+        <span>EL</span> 
+        <i class="fas fa-water"></i> 
+        <span>music</span>
+      </div>
+      <div class="aside-menu">
+        <nav>
+          <ul>
+            <li class="active"><i class="fas fa-home"></i></li>
+            <li><i class="fas fa-user"></i></li>
+            <li><i class="fas fa-layer-group"></i></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="aside-avatar">
+        <div class="btn-avatar">
+          <img src="svg/avatar-aside.svg"/>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <section>
+        <nav>
+          <ul>
+            <li class="action">
+              <div>Home</div>
+              <div>●</div>
+            </li>
+            <li>Amigos</li>
+            <li>oelel</li>
+          </ul>
+        </nav>
+      </section>
+      <footer class="player">
+  
+      </footer>
+    </main>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
   <script src="/js/main.js"></script>
 </body>
 </html>  
