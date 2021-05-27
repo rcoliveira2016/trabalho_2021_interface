@@ -74,21 +74,59 @@ main footer{
 main section{
     flex: auto;
 }
-main section nav ul{
-    list-style-type: none;
+main section nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 2rem 0;
 }
-main section nav ul li{
-    float: left;
-    margin: 0 1rem;
+main section nav .item-nav-menu{
+    margin-right:2rem;
     color: #fff;
     font-weight: 700;
     text-align: center;
+    font-size: 0.9rem;
 }
-main section nav ul li.action{
+main section nav .item-nav-menu.action{
     background: linear-gradient(127deg, rgba(239,181,23,1) 0%, rgba(249,95,20,1) 91%);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
     font-weight: 900;
+}
+
+.card{
+    border-radius: 10px;
+    width: 100%;
+    height: 15vh;
+}
+
+.card-top-destaque{
+    position: relative;
+    background-image: url(https://i.ytimg.com/vi/fPWSm5wZ8_M/maxresdefault.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    box-shadow: 
+        1px 2px 3px 0px #42424273, 
+        inset 2px 6rem 76px -23px rgba(0,0,0,0.51),
+        inset 2px 5rem 76px -23px rgba(0,0,0,0.51),
+        inset 2px 4rem 76px -23px rgba(0,0,0,0.51);
+}
+
+.card-top-destaque-info{
+    top:50%;
+    left: 2rem;
+    transform: translateY(-50%);
+    position: absolute;
+    color: rgb(240, 240, 240);
+}
+
+section .info-musica{
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
 }
 
 @media (max-width: 800px)
