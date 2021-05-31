@@ -1,5 +1,6 @@
 :root{
-    --aside-width: 10vw
+    --aside-width: 10vw;
+    --gradiente-padaro: linear-gradient(127deg, rgba(239,181,23,1) 0%, rgba(249,95,20,1) 91%);
 }
 #app{
     display: flex;
@@ -58,7 +59,7 @@ main{
     border-radius: 0.4rem;
 }
 .aside-menu nav ul li.active{
-    background: linear-gradient(127deg, rgba(239,181,23,1) 0%, rgba(249,95,20,1) 91%);
+    background: var(--gradiente-padaro);
 }
 .aside-avatar{
     flex: 1;
@@ -88,10 +89,83 @@ main section nav .item-nav-menu{
     font-size: 0.9rem;
 }
 main section nav .item-nav-menu.action{
-    background: linear-gradient(127deg, rgba(239,181,23,1) 0%, rgba(249,95,20,1) 91%);
+    background: var(--gradiente-padaro);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
     font-weight: 900;
+}
+
+main footer .player{
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+}
+
+.controles{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.controles > div{
+    flex: 1;
+}
+.player .div-play-pause{
+    text-align: center;
+    color: #fff;
+}
+.player .div-info{
+    margin-top: 1rem;
+    color: #fff;
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.player .div-info .musica{
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.player .div-info i {
+    background: var(--gradiente-padaro);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    font-weight: 900;
+}
+
+.player .div-player-volume{
+    text-align: right;
+}
+.player .play-pause{
+    border-radius: 100%;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--gradiente-padaro);
+    border: none;
+    color: #fff;
+}
+.player .player-volume{
+    color: #fff;
+}
+.player .play-pause{
+    border-radius: 100%;
+    width: 2.5rem;
+    height: 2.5rem;
+    background: var(--gradiente-padaro);
+    border: none;
+    color: #fff;
+}
+
+.player .div-acao span {
+    float: left;
+    background-color: #302f36;
+    border-radius: 10px;
+    padding: 0.5rem 0.8rem;
+    margin: 0 0.15rem;
+    color: #534f64;
 }
 
 .card{
@@ -108,7 +182,7 @@ main section nav .item-nav-menu.action{
     background-position: center;
     border: none;
     box-shadow: 
-        1px 2px 3px 0px #42424273, 
+        0px 1px 3px 1px #42424233, 
         inset 2px 6rem 76px -23px rgba(0,0,0,0.51),
         inset 2px 5rem 76px -23px rgba(0,0,0,0.51),
         inset 2px 4rem 76px -23px rgba(0,0,0,0.51);
@@ -128,6 +202,13 @@ section .info-musica{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
 }
+
+section .info-musica .titulo{
+    font-weight: 900;
+    color: #fff;
+}
+
+
 
 @media (max-width: 800px)
 {
