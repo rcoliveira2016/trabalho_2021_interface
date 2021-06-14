@@ -8,8 +8,142 @@
 <div class="info-musica">
     <div>
         <h2 class="titulo">Top 10</h2>
+        <div class="container-top">
+            <div class="top-10-item">
+                <div class="imagem">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/1/19/More_Life.jpg" />
+                </div>
+                <div class="info">
+                    <div class="top-10-item-musica">New Orleans</div>
+                    <div>Edinaldo pereira</div>
+                </div>
+                <div class="tempo">
+                    13:40
+                </div>
+            </div>
+        </div>
     </div>
     <div>
         <h2 class="titulo">Top Artistas</h2>
+        <div class="container-top">
+            <div class="top-artistas-item">
+                <div class="imagem">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/1/19/More_Life.jpg" />
+                </div>
+                <div class="info">
+                    Edinaldo pereira
+                </div>
+                <div class="link">
+                    <i class="fas fa-angle-right"></i>
+                </div>
+            </div>
+            <div class="top-artistas-item">
+                <div class="imagem">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/1/19/More_Life.jpg" />
+                </div>
+                <div class="info">
+                    Edinaldo pereira
+                </div>
+                <div class="link">
+                    <i class="fas fa-angle-right"></i>
+                </div>
+            </div>
+            <div class="top-artistas-item">
+                <div class="imagem">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/1/19/More_Life.jpg" />
+                </div>
+                <div class="info">
+                    Edinaldo pereira
+                </div>
+                <div class="link">
+                    <i class="fas fa-angle-right"></i>
+                </div>
+            </div>
+            <div class="top-artistas-item">
+                <div class="imagem">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/1/19/More_Life.jpg" />
+                </div>
+                <div class="info">
+                    Edinaldo pereira
+                </div>
+                <div class="link">
+                    <i class="fas fa-angle-right"></i>
+                </div>
+            </div>
+            <div class="top-artistas-item">
+                <div class="imagem">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/1/19/More_Life.jpg" />
+                </div>
+                <div class="info">
+                    Edinaldo pereira
+                </div>
+                <div class="link">
+                    <i class="fas fa-angle-right"></i>
+                </div>
+            </div>
+            <div class="top-artistas-item">
+                <div class="imagem">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/1/19/More_Life.jpg" />
+                </div>
+                <div class="info">
+                    Edinaldo pereira
+                </div>
+                <div class="link">
+                    <i class="fas fa-angle-right"></i>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
+<style>
+    .info-musica{
+        --font-color-clara: #d0d0d0;
+    }
+    .info-musica h2.titulo{
+        margin-bottom: 3vh;
+        color: var(--font-color-clara);
+    }
+    .top-10-item, 
+    .top-artistas-item{
+        display: flex;
+        flex-direction: row;
+        color: #393e42;
+        align-items: center;
+        margin-right: 5vw;
+        font-size: 1.2em;
+        margin-bottom: 1em;
+    }
+    .top-10-item .imagem img,
+    .top-artistas-item .imagem img{
+        width: 5em;
+        height: 5em;
+        object-fit: cover;
+    }
+    .top-artistas-item .imagem img{
+        border-radius: 50%;
+    }
+    .top-10-item .info,
+    .top-artistas-item .info{
+        flex: auto;
+        padding-left: 1em;
+        font-weight: 600;
+    }
+    
+    .top-artistas-item .info {
+        color: var(--font-color-clara);
+    }
+    .top-10-item-musica{
+        color: var(--font-color-clara);
+        font-weight: 900;
+    }
+    .top-artistas-item .link{
+        color: #fff;
+    }
+
+    @media (max-width: 700px)
+    {
+        section .info-musica{
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
