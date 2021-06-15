@@ -290,15 +290,20 @@ section .info-musica .titulo{
 .top-artistas-item,
 .top-10-item{
     filter: grayscale(50%);
-    transition: all 500ms;
+    transition: all 200ms;
 }
 .top-artistas-item:hover,
 .top-10-item:hover{
     filter: grayscale(0);
     background: #ffffff03;
-    box-shadow:0 0 20px 7px #ffffff03;
+    box-shadow:0 0 20px 7px #ffffff03;    
 }
-
+.card.card-top-destaque{
+    transition: all 200ms;    
+}
+.card.card-top-destaque:hover{
+    box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.116);
+}
 @media (max-width: 700px)
 {
     section .info-musica{
