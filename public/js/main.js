@@ -7,6 +7,11 @@ var App = (function(){
             .addClass('action')
             .append(divConteusoSelecuonado);
     }
+    var selecionarItemAsideMenu = function(){
+        const navMenu = $('.aside-menu');
+        navMenu.find(`a[href="${location.pathname}"] li`)
+            .addClass('active')
+    }
     var setarPlayer = function(){
         $('#play-audio').prop('src', '/audio/faixa-1.mp3')
     }
@@ -30,8 +35,29 @@ var App = (function(){
             console.log($('.play-pause').attr('data-status'));
         });
     }
+    var eventoControlesAcoes = function(){
+        $('.div-acao .zap').on('click', function(){
+            const urlBaseApi = new URL("https://api.whatsapp.com/send");
+            urlBaseApi.searchParams.append("phone", "555492267997");
+            const a = document.createElement("a");
+            a.href = urlBaseApi.toString();
+            a.target = "_blank";
+            a.click();
+        });
+        $('.div-acao .expandir').on('click', function(){
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+              if (document.exitFullscreen) {
+                document.exitFullscreen();
+              }
+            }
+        });
+    }
     return {
         init: function(){
+            selecionarItemAsideMenu();
+            eventoControlesAcoes();
             setarPlayer();
             eventoPlay();
             selecionarItemMenu();
