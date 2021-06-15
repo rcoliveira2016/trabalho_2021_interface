@@ -5,12 +5,12 @@ router.get('/', (req, res) => {
     res.render('pages/home');
 });
 
-router.get('/about', (req, res) => {
-    res.render('pages/about');
+router.get('/fala', (req, res) => {
+    res.render('pages/fala');
 });
 
-router.get('/contact', (req, res) => {
-    res.render('pages/contact');
+router.get('/playlist', (req, res) => {
+    res.render('pages/playlist');
 });
 
 module.exports = router;

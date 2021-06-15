@@ -1,6 +1,10 @@
 :root{
     --aside-width: 10vw;
     --gradiente-padaro: linear-gradient(127deg, rgba(239,181,23,1) 0%, rgba(249,95,20,1) 91%);
+    --gradiente-padaro-intermediario: linear-gradient(127deg,  rgba(249,95,20,1) 0%, rgb(239, 153, 23) 20%, rgba(239,181,23,1) 71%);
+    --gradiente-padaro-invertido: linear-gradient(127deg,  rgba(249,95,20,1) 0%, rgba(239,181,23,1) 91%);
+    --font-color-clara: #d0d0d0;
+    --color-font-sem-destaque :#6a7075
 }
 #app{
     display: flex;
@@ -59,6 +63,12 @@ main{
     padding: 0.7rem 0.9rem;
     text-align: center;
     border-radius: 0.4rem;
+    transition: color,background-color 500ms ease;
+}
+.aside-menu nav ul li:hover{
+    color: #302f36;
+    transition: all 500ms ease;
+    background-color: #534f64;
 }
 .aside-menu nav ul li.active{
     background: var(--gradiente-padaro);
@@ -85,18 +95,24 @@ main section nav{
     flex-direction: row;
     margin: 2rem 0;
 }
+main section a{
+    text-decoration: none;
+}
 main section nav .item-nav-menu{
     margin-right:2rem;
     color: #fff;
     font-weight: 700;
     text-align: center;
     font-size: 0.9rem;
+    transition: all 1s ease;
 }
+main section nav .item-nav-menu:hover,
 main section nav .item-nav-menu.action{
+    transition: all 500ms ease;
     background: var(--gradiente-padaro);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-    font-weight: 900;
+    transform: scale(1.1);
 }
 
 main footer .player{
@@ -132,12 +148,14 @@ main footer .player{
     font-size: 1rem;
     font-weight: 100;
 }
-
 .player .div-info i {
     background: var(--gradiente-padaro);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
     font-weight: 900;
+    font-size: 1.4em;
+    animation: trocabackgroundgradiente 500ms ease-in-out;
+    animation-iteration-count: infinite;
 }
 
 .player .div-player-volume{
@@ -149,17 +167,18 @@ main footer .player{
     height: 2.5rem;
     background: var(--gradiente-padaro);
     border: none;
-    color: #fff;
+    color: #fff;    
+}
+.player .play-pause[data-status=play]{
+    animation: trocarplay 500ms ease-in-out;
+    animation-iteration-count: infinite;
+}
+.player .play-pause:hover{
+    transition: all 1s ease;
+    background: var(--gradiente-padaro-invertido);
+    color: var(--font-color-clara);
 }
 .player .player-volume{
-    color: #fff;
-}
-.player .play-pause{
-    border-radius: 100%;
-    width: 2.5rem;
-    height: 2.5rem;
-    background: var(--gradiente-padaro);
-    border: none;
     color: #fff;
 }
 
@@ -170,6 +189,11 @@ main footer .player{
     padding: 0.5rem 0.8rem;
     margin: 0 0.15rem;
     color: #534f64;
+}
+
+.player .div-acao span:hover {
+    background-color: #534f64;    
+    color: #302f36;
 }
 
 .card{
@@ -220,7 +244,64 @@ section .info-musica .titulo{
     font-weight: 900;
     color: #fff;
 }
+/* muscias e plkaylists */
+.info-musica h2.titulo{
+    margin-bottom: 3vh;
+    color: var(--font-color-clara);
+}
+.top-10-item, 
+.top-artistas-item{
+    display: flex;
+    flex-direction: row;
+    color:var(--color-font-sem-destaque);
+    align-items: center;
+    margin-right: 5vw;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+.top-10-item .imagem img,
+.top-artistas-item .imagem img{
+    width: 5em;
+    height: 5em;
+    object-fit: cover;
+}
+.top-artistas-item .imagem img{
+    border-radius: 50%;
+}
+.top-10-item .info,
+.top-artistas-item .info{
+    flex: auto;
+    padding-left: 1em;
+    font-weight: 600;
+}
 
+.top-artistas-item .info {
+    color: var(--font-color-clara);
+}
+.top-10-item-musica{
+    color: var(--font-color-clara);
+    font-weight: 900;
+}
+.top-artistas-item .link{
+    color: #fff;
+}
+.top-artistas-item,
+.top-10-item{
+    filter: grayscale(50%);
+    transition: all 500ms cubic-bezier();
+}
+.top-artistas-item:hover,
+.top-10-item:hover{
+    filter: grayscale(0);
+}
+
+@media (max-width: 700px)
+{
+    section .info-musica{
+        grid-template-columns: 1fr;
+    }
+}
+/* muscias e plkaylists */
 
 
 @media (max-width: 800px)
@@ -244,3 +325,34 @@ section .info-musica .titulo{
     }
 }
 
+@keyframes trocabackgroundgradiente {
+    0% { 
+        background: var(--gradiente-padaro);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+     }
+    50% { background: var(--gradiente-padaro-intermediario);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; }
+    100% { background: var(--gradiente-padaro-invertido);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent; }
+}
+
+@keyframes trocarplay {
+    0% { 
+        transform: scale(1.2);
+     }
+    25% { 
+        transform: scale(1.5);
+    }
+    50% { 
+        transform: scale(1.1);
+     }
+     75%{
+        transform: scale(1.3);
+     }
+    100% { 
+        transform: scale(1);
+     }
+}
