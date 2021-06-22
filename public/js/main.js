@@ -54,6 +54,44 @@ var App = (function(){
             }
         });
     }
+    var eventoMenuLateral = function(){
+        window.addEventListener('resize', function(event) {
+            if($(window).width() > 450)
+                $('aside').css({
+                    display:"flex",
+                    position:"relative",
+                    height:"auto",
+                    "z-index": 0
+                })
+            else{
+                $('aside').css({
+                    display:"none",
+                    position:"relative",
+                    height:"auto",
+                    "z-index": 0,
+                })
+            }
+        }, true);
+        $('.abrir-menu-lateral').on('click', function(){
+            if($(window).width() > 450) return;
+            $('aside').css({
+                display:"flex",
+                position:"fixed",
+                height:"100vh",
+                "z-index": 10
+            })
+        });
+        $('.aside-titulo').on('click', function(){
+            if($(window).width() > 450) return;
+            $('aside').css({
+                display:"none",
+                position:"relative",
+                height:"auto",
+                "z-index": 0,
+                transform: "translatex(-150%)"
+            })
+        });
+    }
     return {
         init: function(){
             selecionarItemAsideMenu();
@@ -61,6 +99,7 @@ var App = (function(){
             setarPlayer();
             eventoPlay();
             selecionarItemMenu();
+            eventoMenuLateral();
         }
     }
 })()

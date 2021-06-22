@@ -13,6 +13,11 @@
 ::-webkit-scrollbar {
     width: 0;
 }
+hr{
+    height: 0.25rem !important;
+    background-color: #fff;
+    border-radius: 0.25rem;
+}
 aside{
     width: var(--aside-width);
     background-color: #1d1c23;
@@ -24,6 +29,7 @@ aside{
     min-width: 135px;
     flex: auto;
     height: inherit;
+    transition: all 500sm;
 }
 main{
     width: calc(100vw - var(--aside-width));
@@ -76,10 +82,14 @@ main{
 .aside-avatar{
     flex: 1;
 }
-.aside-avatar .btn-avatar{
+.btn-avatar{
     width: 4rem;
     border-radius: 100%;
     border: 3px solid #534f64;
+    transition: transform 300ms;
+}
+.btn-avatar:hover{
+    transform: scale(1.1);
 }
 main footer{
     min-height: 100px;
@@ -88,6 +98,16 @@ main section{
     flex: auto;
     display: flex;
     flex-direction: column;
+}
+.nav-logo{
+    display: none;
+    font-size: 1.5rem;
+    color: var(--font-color-clara);
+    z-index: 3;
+}
+.nav-itens-normais{
+    flex: auto;
+    display: flex;
 }
 main section nav{
     width: 100%;
@@ -304,6 +324,45 @@ section .info-musica .titulo{
 .card.card-top-destaque:hover{
     box-shadow: 1px 1px 1px 1px rgba(255, 255, 255, 0.116);
 }
+
+.container-fala{
+    color: var(--font-color-clara);
+}
+.campo{
+    margin: 1.2rem 0;
+    width: 50vw;
+}
+.campo label{
+    font-weight: bold;
+}
+.campo input:focus, .campo textarea:focus,
+.campo input, .campo textarea{
+    border: none;
+    outline:none;
+    border-bottom: 1px solid var(--color-font-sem-destaque);
+    transition: all 200ms ease-in;
+}
+.campo input:focus, .campo textarea:focus{
+    transition: all 200ms ease-in;
+    border-bottom: 1px solid #fff;
+}
+.campo input, .campo textarea{
+    transition: all 200ms ease-in;
+
+    width: 100%;
+    background-color: unset;
+    color: var(--font-color-clara);
+}
+.c-btn button{
+    padding: 0.3em 4rem;
+    border: none;
+    background: var(--gradiente-padaro-invertido);
+    color: #fff;
+}
+.c-btn button:hover{
+    filter: contrast(2);
+}
+
 @media (max-width: 700px)
 {
     section .info-musica{
@@ -318,6 +377,13 @@ section .info-musica .titulo{
     .aside-titulo span{
         display: none;
     }
+    .conteudo-perfil{
+        flex-direction: column !important;
+    }
+    .container-favoritas{
+        padding: 0 !important;
+        margin-top: 1rem;
+    }
 }
 
 @media (max-width: 590px)
@@ -325,12 +391,22 @@ section .info-musica .titulo{
     aside{
         min-width: 90px;
     }
+    .campo{     
+        width: 100%;
+    }
 }
 
 @media (max-width: 450px)
 {    
-    main section nav{
+    main section nav .nav-itens-normais{
         flex-direction: column;
+    }
+    aside{
+        transition: all 500sm;
+        display: none;
+    }
+    .nav-logo{
+        display: flex;
     }
 }
 

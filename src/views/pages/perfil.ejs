@@ -1,0 +1,88 @@
+<%- contentFor('body') %>
+<div class="perfil">
+    <header>
+        <div class="btn-avatar">
+            <a href="/perfil">
+                <img src="svg/avatar-aside.svg"/>
+            </a>
+        </div>
+    </header>
+    <hr/>
+    <div class="conteudo-perfil">
+        <div class="container-campo">
+            <div class="campo">
+                <label>Nome</label>
+                <div>
+                    <input type="text" value="Ramon Cardoso">
+                </div>
+            </div>
+            <div class="campo">
+                <label>E - mail</label>
+                <div>
+                    <input type="text" value="Ramon.Cardoso@lolo.com.br">
+                </div>
+            </div>
+            <div class="c-btn mt-4">
+                <button>
+                    Atualizar
+                </button>
+            </div>
+        </div>
+        <div class="container-favoritas">
+            <h2 class="titulo mb-3"> <i class="fas fa-heart text-danger"></i> Favoritas</h2>
+            <div class="container-top">
+                <div class="top-10-item">
+                    <div class="imagem">
+                        <img src="https://upload.wikimedia.org/wikipedia/pt/1/19/More_Life.jpg" />
+                    </div>
+                    <div class="info">
+                        <div class="top-10-item-musica">New Orleans</div>
+                        <div>Edinaldo pereira</div>
+                    </div>
+                    <div class="tempo">
+                        13:40
+                    </div>
+                </div>
+                <div class="top-10-item">
+                    <div class="imagem">
+                        <img src="https://upload.wikimedia.org/wikipedia/pt/1/19/More_Life.jpg" />
+                    </div>
+                    <div class="info">
+                        <div class="top-10-item-musica">New Orleans</div>
+                        <div>Edinaldo pereira</div>
+                    </div>
+                    <div class="tempo">
+                        13:40
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .perfil{
+        width: 100%;
+        color: var(--font-color-clara);;
+    }
+    .perfil header .btn-avatar{
+        width: 8vw;
+        min-width: 100px;
+    }
+    .conteudo-perfil{
+        display: flex;
+        flex-direction: row;
+    }
+    .container-campo,
+    .container-favoritas {
+        flex: 1;
+    }
+    .container-favoritas {
+        padding: 0 3vw;
+        display: flex;
+        flex-direction: column;
+        font-size: 12px;
+    }
+    .campo{
+        width: 100% !important;
+    }
+</style>

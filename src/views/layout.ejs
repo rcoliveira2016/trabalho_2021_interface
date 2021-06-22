@@ -17,7 +17,7 @@
         <i class="fas fa-water"></i> 
         <span>music</span>
       </div>
-      <div class="aside-menu">
+      <div class="aside-menu">        
         <nav>
           <ul>
             <a href="/">
@@ -40,13 +40,19 @@
       </div>
       <div class="aside-avatar">
         <div class="btn-avatar">
-          <img src="svg/avatar-aside.svg"/>
+          <a href="/perfil">
+            <img src="svg/avatar-aside.svg"/>
+          </a>
         </div>
       </div>
     </aside>
     <main>
       <section>
         <nav class="nav-menu">
+          <div class="nav-logo">
+            <i class="fas fa-water abrir-menu-lateral"></i> 
+          </div>
+          <div class="nav-itens-normais">
             <a href="/">
               <div class="item-nav-menu">Home</div>
             </a>
@@ -55,8 +61,8 @@
             </a>
             <a href="/playlist">
               <div class="item-nav-menu">Playlists</div>
-            </a>            
-          </ul>
+            </a>
+          </div>            
         </nav>
         <%- body %>
       </section>

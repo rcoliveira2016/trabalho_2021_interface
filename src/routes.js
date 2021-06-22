@@ -13,4 +13,8 @@ router.get('/playlist', (req, res) => {
     res.render('pages/playlist');
 });
 
+router.get('/perfil', (req, res) => {
+    res.render('pages/perfil');
+});
+
 module.exports = router;
