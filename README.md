@@ -1,4 +1,4 @@
-# trabalho_2021_interface
+# Trabalho Interfaces Humano-Computador FSG-01/2021
 
 ## Como rodar
     git clone https://github.com/rcoliveira2016/trabalho_2021_interface.git
