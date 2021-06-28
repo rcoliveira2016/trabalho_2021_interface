@@ -5,4 +5,7 @@
     npm install
     npm start
 
-adicionar rotas no arquivo src/router.js
+Adicionar rotas no arquivo src/router.js
+
+Codigo do servidor/html está na pasta __/src/__
+Arquivos estáticos(css, js, imagns ect) está na pasta __/public/__
