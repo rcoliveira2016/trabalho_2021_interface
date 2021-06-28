@@ -396,6 +396,13 @@ section .info-musica .titulo{
     }
 }
 
+@media (max-width: 593px)
+{    
+    .div-acao span:not(:last-child){
+        margin-bottom: 0.3rem;
+    }
+}
+
 @media (max-width: 450px)
 {    
     main section nav .nav-itens-normais{

@@ -72,6 +72,7 @@ var App = (function(){
                 })
             }
         }, true);
+
         $('.abrir-menu-lateral').on('click', function(){
             if($(window).width() > 450) return;
             $('aside').css({
@@ -81,6 +82,7 @@ var App = (function(){
                 "z-index": 10
             })
         });
+
         $('.aside-titulo').on('click', function(){
             if($(window).width() > 450) return;
             $('aside').css({
@@ -88,9 +90,14 @@ var App = (function(){
                 position:"relative",
                 height:"auto",
                 "z-index": 0,
-                transform: "translatex(-150%)"
             })
         });
+    }
+    var eventoFavorito = function(){
+        $('.btn-favorito').on('click', function(){
+            console.log('qqqq')
+            document.querySelector('.btn-favorito').classList.toggle('text-danger')
+        })
     }
     return {
         init: function(){
@@ -100,6 +107,7 @@ var App = (function(){
             eventoPlay();
             selecionarItemMenu();
             eventoMenuLateral();
+            eventoFavorito();
         }
     }
 })()
