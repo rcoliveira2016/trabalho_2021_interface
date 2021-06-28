@@ -13,6 +13,6 @@ Arquivos estáticos(css, js, imagns ect) está na pasta __/public/__
 
 
 ## Dicas
-Adicionar rotas no arquivo src/router.js
+Adicionar rotas no arquivo __src/router.js__
 
 Exemplo da qrquitetura extraida do artigo: https://www.codementor.io/@nulldreams/utilizando-a-engine-ejs-para-aplicacoes-em-nodejs-dok81l3si
